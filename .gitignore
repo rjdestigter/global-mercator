@@ -1,6 +1,7 @@
 .esm-cache
 global-mercator.js
 index.js
+index.d.ts
 
 # Logs
 logs
