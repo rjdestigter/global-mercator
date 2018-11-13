@@ -16,7 +16,8 @@
     "global-mercator.js"
   ],
   "scripts": {
-    "pretest": "rollup -c rollup.config.js",
+    "build": "tsc --project . && prettier ./index.js --write",
+    "pretest": "npm run build && rollup -c rollup.config.js",
     "test": "tap test.js --coverage",
     "posttest": "standard index.js",
     "bench": "node bench.js",
@@ -51,9 +52,12 @@
   "devDependencies": {
     "benchmark": "*",
     "documentation": "*",
+    "prettier": "^1.15.2",
     "rollup": "*",
     "standard": "*",
-    "tap": "*"
+    "tap": "*",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6"
   },
   "dependencies": {}
 }
