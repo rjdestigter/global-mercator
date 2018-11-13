@@ -16,7 +16,7 @@
     "global-mercator.js"
   ],
   "scripts": {
-    "build": "tsc --project . && prettier ./index.js --write",
+    "build": "tsc --project . && prettier ./index.js --write && prettier ./index.d.ts --write",
     "pretest": "npm run build && rollup -c rollup.config.js",
     "test": "tap test.js --coverage",
     "posttest": "standard index.js",
